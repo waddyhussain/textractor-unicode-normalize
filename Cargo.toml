@@ -1,0 +1,22 @@
+[package]
+name = "unicode-normalize"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "unicode_normalize"
+crate-type = ["cdylib"]
+
+[dependencies]
+widestring = "1.2.0"
+unicode-normalization = "0.1.23"
+
+[dependencies.windows-sys]
+version = "0.59"
+features = [
+    "Win32_Security",
+    "Win32_System_Threading",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_System_SystemServices",
+    "Win32_System_Memory",
+]
